@@ -24,7 +24,7 @@ RUN /bin/bash -c a2enmod rewrite
 COPY ./cert/cert-key.pem /usr/local/apache2/cert/
 COPY ./cert/cert.pem /usr/local/apache2/cert/
 
-COPY ./conf/httpd.conf /etc/apache2/apache2.conf
-COPY ./conf/ssl.conf /etc/apache2/sites-available/ssl.conf
+COPY ./conf/httpd.conf /etc/apache2/sites-enabled/httpd.conf
+COPY ./conf/ssl.conf /etc/apache2/sites-enabled/ssl.conf
 
 COPY ./php/php.ini /usr/local/etc/php/php.ini
