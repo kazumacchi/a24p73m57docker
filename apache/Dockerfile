@@ -14,6 +14,7 @@ RUN apt-get install -y libonig-dev
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
 RUN a2enmod ssl
+RUN a2enmod rewrite
 RUN a2ensite default-ssl
 RUN docker-php-ext-install intl
 RUN docker-php-ext-install pdo_mysql
